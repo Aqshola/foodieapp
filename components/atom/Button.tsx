@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-interface Props {
+interface Props extends React.HTMLProps<HTMLButtonElement> {
   children?: ReactNode;
   onClick?: (params: any) => any;
   width?: 'w-full' | 'w-10' | 'w-32';

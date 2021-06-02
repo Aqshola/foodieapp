@@ -1,5 +1,4 @@
-import {motion }from "framer-motion"
+import { motion } from 'framer-motion';
 
-export default function Input() {
-    
-};
+interface Props extends React.HTMLProps<HTMLInputElement> {}
+export default function Input({ ...props }: Props) {}
