@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-blur {
+  background: rgb(255, 71, 11);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 71, 11, 0) 0%,
+    rgba(255, 71, 11, 1) 100%
+  );
+}
+
+.bg-blur2 {
+  background: rgb(255, 71, 11);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 71, 11, 0) 0%,
+    rgba(255, 71, 11, 1) 100%
+  );
+}
