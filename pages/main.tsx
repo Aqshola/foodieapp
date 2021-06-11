@@ -5,7 +5,7 @@ import BottomNav from '@components/molecule/BottomNav';
 
 export default function Main() {
   return (
-    <div className="max-w-screen-sm min-h-screen bg-gray-100 mx-auto">
+    <div className="w-max-w-screen-xs min-h-screen bg-gray-100 mx-auto">
       <div className="flex flex-col min-h-screen">
         <Nav />
         <MainHeader />

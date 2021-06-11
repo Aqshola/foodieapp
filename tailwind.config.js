@@ -25,6 +25,9 @@ module.exports = {
       dropShadow: {
         card: 'drop-shadow( 0px 6px 5px  rgba(215, 56, 0, 0.4))',
       },
+      width: {
+        'max-w-screen-xs': '480px',
+      },
     },
   },
   variants: {
