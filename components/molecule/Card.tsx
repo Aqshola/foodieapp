@@ -5,7 +5,7 @@ export default function Card(params) {
       <div className="absolute -top-14">
         <Image src="/food1.png" width="164px" height="164px" />
       </div>
-      <h1 className=" font-semibold mt-14 text-center">
+      <h1 className=" font-semibold mt-20 text-center">
         Veggie <br /> tomato Mix
       </h1>
       <p className="text-red-100 font-semibold mt-3">N1,900</p>

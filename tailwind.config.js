@@ -10,7 +10,7 @@ module.exports = {
           100: '#FF4B3A',
         },
         gray: {
-          100: '#F5F5F8',
+          100: '#F4F4F8',
           200: '#EEEEEE',
           300: '#F6F6F9',
         },
