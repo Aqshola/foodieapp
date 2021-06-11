@@ -19,6 +19,12 @@ module.exports = {
         display: ['Open Sans', ...defaultTheme.fontFamily.sans],
         body: ['Open Sans', ...defaultTheme.fontFamily.sans],
       },
+      boxShadow: {
+        card: ' 0px 30px 60px rgba(57, 57, 57, 0.1)',
+      },
+      dropShadow: {
+        card: 'drop-shadow( 0px 6px 5px  rgba(215, 56, 0, 0.4))',
+      },
     },
   },
   variants: {
