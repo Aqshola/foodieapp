@@ -1,6 +1,7 @@
 import { Ham, Cart } from '@components/atom/Icon';
 import { useState } from 'react';
 import SideNav from './SideNav';
+import { AnimatePresence } from 'framer-motion';
 
 export default function Nav() {
   const [viewSide, setviewSide] = useState<boolean>(false);
@@ -19,7 +20,9 @@ export default function Nav() {
           <Cart />
         </button>
       </div>
-      {viewSide && <SideNav />}
+      <AnimatePresence>
+        {viewSide && <SideNav view={viewSide} setView={_handleViewSideNav} />}
+      </AnimatePresence>
     </>
   );
 }
