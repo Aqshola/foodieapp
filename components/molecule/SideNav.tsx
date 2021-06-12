@@ -7,7 +7,27 @@ type Props = {
 export default function SideNav({ view, setView }: Props) {
   const Variant = {
     visible: { x: 0 },
-    hidden: { x: '-100%' },
+    hidden: { x: '-100%', transition: { delay: 0.5 } },
+  };
+
+  const UlVariant = {
+    visible: {
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    },
+    hidden: {
+      transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    },
+  };
+
+  const LiVariant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    hidden: {
+      opacity: 0,
+      y: 40,
+    },
   };
   return (
     <motion.div
@@ -15,7 +35,7 @@ export default function SideNav({ view, setView }: Props) {
       variants={Variant}
       exit="hidden"
       animate="visible"
-      transition={{ type: 'spring', bounce: 0.3, duration: 0.4 }}
+      transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
       className="flex px-10 flex-col bg-primary h-full w-full absolute z-20"
     >
       <div className="flex justify-end py-4">
@@ -36,13 +56,16 @@ export default function SideNav({ view, setView }: Props) {
         </button>
       </div>
       <div className={'transition-all ' + (view ? 'py-24' : '')}>
-        <li className=" flex flex-col font-medium h-52 justify-between list-none text-white">
-          <ul>Profile</ul>
-          <ul>Order</ul>
-          <ul>Offer</ul>
-          <ul>Privacy Policy</ul>
-          <ul>Security</ul>
-        </li>
+        <motion.ul
+          variants={UlVariant}
+          className=" flex flex-col font-medium h-52 justify-between list-none text-white"
+        >
+          <motion.li variants={LiVariant}>Profile</motion.li>
+          <motion.li variants={LiVariant}>Order</motion.li>
+          <motion.li variants={LiVariant}>Offer</motion.li>
+          <motion.li variants={LiVariant}>Privacy Policy</motion.li>
+          <motion.li variants={LiVariant}>Security</motion.li>
+        </motion.ul>
       </div>
     </motion.div>
   );
