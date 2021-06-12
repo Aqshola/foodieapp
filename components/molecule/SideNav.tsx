@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { Profile, Offer, Policy, Order, Security } from '@components/atom/Icon';
+import SideNavLink from '@components/atom/SideNavLink';
 type Props = {
   view: boolean;
   setView: () => void;
@@ -19,16 +21,6 @@ export default function SideNav({ view, setView }: Props) {
     },
   };
 
-  const LiVariant = {
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-    hidden: {
-      opacity: 0,
-      y: 40,
-    },
-  };
   return (
     <motion.div
       initial="hidden"
@@ -58,13 +50,28 @@ export default function SideNav({ view, setView }: Props) {
       <div className={'transition-all ' + (view ? 'py-24' : '')}>
         <motion.ul
           variants={UlVariant}
-          className=" flex flex-col font-medium h-52 justify-between list-none text-white"
+          className=" flex flex-col font-medium h-52 justify-between list-none text-white gap-5"
         >
-          <motion.li variants={LiVariant}>Profile</motion.li>
-          <motion.li variants={LiVariant}>Order</motion.li>
-          <motion.li variants={LiVariant}>Offer</motion.li>
-          <motion.li variants={LiVariant}>Privacy Policy</motion.li>
-          <motion.li variants={LiVariant}>Security</motion.li>
+          <SideNavLink>
+            <Profile />
+            <p>Profile</p>
+          </SideNavLink>
+          <SideNavLink>
+            <Order />
+            <p>Order</p>
+          </SideNavLink>
+          <SideNavLink>
+            <Offer />
+            <p>Offer and promo</p>
+          </SideNavLink>
+          <SideNavLink>
+            <Policy />
+            <p>Privacy Policy</p>
+          </SideNavLink>
+          <SideNavLink>
+            <Security />
+            <p>Security</p>
+          </SideNavLink>
         </motion.ul>
       </div>
     </motion.div>
