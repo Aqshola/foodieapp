@@ -106,19 +106,17 @@ function Search({ className, active }: Props) {
 function Ham({ className, active }: Props) {
   return (
     <svg
-      width="25"
-      height="17"
-      viewBox="0 0 25 17"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className + ' ' + (active && ' card-shadow')}
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
     >
       <path
-        d="M1.59857 8.33333H13.5M1.59857 1H23.5986M1.59857 15.6667H23.5986"
-        stroke="black"
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth={2}
+        d="M4 6h16M4 12h8m-8 6h16"
       />
     </svg>
   );
