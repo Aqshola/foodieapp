@@ -8,8 +8,11 @@ type Props = {
 
 export default function SideNav({ view, setView }: Props) {
   const Variant = {
-    visible: { x: 0 },
-    hidden: { x: '-100%', transition: { delay: 0.5 } },
+    visible: { x: 0, transition: { type: 'spring', bounce: 0, duration: 0.4 } },
+    hidden: {
+      x: '-100%',
+      transition: { type: 'spring', bounce: 0, duration: 0.4, delay: 0.5 },
+    },
   };
 
   const UlVariant = {
@@ -27,7 +30,6 @@ export default function SideNav({ view, setView }: Props) {
       variants={Variant}
       exit="hidden"
       animate="visible"
-      transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
       className="flex px-10 flex-col bg-primary h-full w-full absolute z-20"
     >
       <div className="flex justify-end py-4">
