@@ -16,7 +16,7 @@ export default function Card(params) {
       variants={Variant}
       initial="hidden"
       animate="visible"
-      className="bg-white w-44 h-52 mr-5 rounded-xl shadow-card flex flex-col items-center justify-center relative sm:mt-10"
+      className="bg-white w-44 h-52  rounded-xl shadow-card flex flex-col items-center justify-center relative mt-14 mb-20 ml-10"
     >
       <div className="absolute -top-14">
         <Image src="/food1.png" width="164px" height="164px" />
