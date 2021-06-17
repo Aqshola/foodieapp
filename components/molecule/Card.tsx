@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 export default function Card(params) {
   const Variant = {
     visible: {
@@ -13,8 +14,8 @@ export default function Card(params) {
   };
   return (
     <motion.div
-      variants={Variant}
       initial="hidden"
+      variants={Variant}
       animate="visible"
       className="bg-white w-44 h-52  rounded-xl shadow-card flex flex-col items-center justify-center relative mt-14 mb-20 ml-10"
     >

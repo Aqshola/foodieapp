@@ -4,10 +4,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 
 export default function MainContent(params) {
-  const settings = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
   return (
     <div className="grid grid-cols-12 auto-rows-min   mt-10 flex-grow">
       <div className="col-start-2 col-span-10 ">
@@ -20,7 +16,7 @@ export default function MainContent(params) {
       </div>
 
       <div className=" col-start-1 col-span-12 py-4">
-        <Slider arrows={false} infinite={false} slidesToShow={1.6}>
+        <Slider arrows={false} infinite={false} slidesToShow={1.7}>
           <Card />
           <Card />
           <Card />
