@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-export default function Card(params) {
+
+interface Props {
+  onClick?: () => void;
+}
+
+export default function Card({ onClick }: Props) {
   const Variant = {
     visible: {
       x: 0,
@@ -14,10 +18,14 @@ export default function Card(params) {
   };
   return (
     <motion.div
+      whileTap={{
+        scale: 0.7,
+      }}
       initial="hidden"
       variants={Variant}
       animate="visible"
       className="bg-white w-44 h-52  rounded-xl shadow-card flex flex-col items-center justify-center relative mt-14 mb-20 ml-10"
+      onClick={onClick}
     >
       <div className="absolute -top-14">
         <Image src="/food1.png" width="164px" height="164px" />
