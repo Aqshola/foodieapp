@@ -6,15 +6,25 @@ import { motion } from 'framer-motion';
 
 export default function Main() {
   return (
-    <motion.div>
-      <div className="max-w-screen-xs min-h-screen border bg-gray-100 mx-auto">
+    <div className="max-w-screen-xs min-h-screen border bg-gray-100 mx-auto">
+      <motion.div
+        exit={{
+          translateX: '-100%',
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          type: 'tween',
+          duration: 0.15,
+        }}
+      >
         <div className="flex flex-col min-h-screen relative overflow-x-hidden">
           <Nav />
           <MainHeader />
           <MainContent />
           <BottomNav />
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
