@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function Main() {
   return (
-    <div className="max-w-screen-xs min-h-screen border bg-gray-100 mx-auto">
+    <div className="overflow-x-hidden max-w-screen-xs min-h-screen border bg-gray-100 mx-auto">
       <motion.div
         exit={{
           translateX: '-100%',
