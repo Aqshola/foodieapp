@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 export default function FoodContent(params) {
   const parentWrapper = {
     visible: {
@@ -46,6 +47,9 @@ export default function FoodContent(params) {
       y: '100%',
     },
   };
+
+  const router = useRouter();
+
   return (
     <div className=" grid grid-cols-12 auto-rows-min">
       <div className="col-span-6 col-start-4  mt-3">
@@ -85,6 +89,9 @@ export default function FoodContent(params) {
         className="mt-10 col-start-2 col-span-10 py-5 px-10 rounded-full bg-primary text-white font-semibold"
         variants={buttonWrapper}
         animate="visible"
+        onClick={() => {
+          router.push('/checkout/delivery');
+        }}
       >
         Add to Cart
       </motion.button>

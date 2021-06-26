@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import FoodNav from '@components/template/Foods/FoodNav';
 import FoodContent from '@components/template/Foods/FoodContent';
+
 export default function Food(params) {
   return (
     <div className="overflow-x-hidden max-w-screen-xs border min-h-screen bg-gray-100 mx-auto ">
